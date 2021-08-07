@@ -1,9 +1,5 @@
 from flask import Flask
 from Model import *
-import logging
-import pandas as pd
-
-logging.basicConfig(filename='record.log', level=logging.DEBUG, format=f'%(asctime)s %(levelname)s : %(message)s')
 
 app = Flask(__name__)
 
@@ -13,9 +9,7 @@ def hello_world():
 
 @app.route('/print')
 def modelrun():
-    app.logger.info('Info level log')
-    df = pd.read_csv("pima-indians-diabetesdata-pima-indians-diabetesdata.csv")
-    app.logger.info(df.tail())
+    printcsv()
     return "success"
 
     
