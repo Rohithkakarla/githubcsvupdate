@@ -1,5 +1,5 @@
 from flask import Flask
-from Model import printcsv
+from Model import *
 
 app = Flask(__name__)
 
@@ -9,8 +9,8 @@ def hello_world():
 
 @app.route('/print')
 def modelrun():
-    printcsv()
-    return "Success Printing"
+    return printcsv()
+
     
 if __name__ == '__main__':
 	app.run()
