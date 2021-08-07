@@ -1,5 +1,6 @@
 from flask import Flask
 from Model import printcsv
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -11,4 +12,4 @@ def modelrun():
     printcsv()
     
 if __name__ == '__main__':
-	app.run(host="0.0.0.0", debug=True)
+	app.run()
