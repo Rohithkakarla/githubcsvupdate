@@ -10,9 +10,9 @@ Original file is located at
 import pandas as pd
 import logging
 
-logger=logging.getLogger()
+logging.basicConfig(filename='record.log', level=logging.DEBUG, format=f'%(asctime)s %(levelname)s : %(message)s')
 
 def printcsv():
     df = pd.read_csv("pima-indians-diabetesdata-pima-indians-diabetesdata.csv")
-    logger.info(df.tail())
+    
     return "success"
