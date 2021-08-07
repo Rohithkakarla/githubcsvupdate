@@ -12,4 +12,5 @@ import pandas as pd
 
 def printcsv():
     df = pd.read_csv("pima-indians-diabetesdata-pima-indians-diabetesdata.csv")
-    return df.tail()
+    df.tail()
+    return "success"
