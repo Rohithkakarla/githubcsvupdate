@@ -10,6 +10,7 @@ def hello_world():
 @app.route('/print')
 def modelrun():
     printcsv()
+    return "Success Printing"
     
 if __name__ == '__main__':
 	app.run()
