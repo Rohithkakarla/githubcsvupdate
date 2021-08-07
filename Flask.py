@@ -1,5 +1,8 @@
 from flask import Flask
 from Model import *
+import logging
+
+logger=logging.getLogger()
 
 app = Flask(__name__)
 
@@ -9,6 +12,7 @@ def hello_world():
 
 @app.route('/print')
 def modelrun():
+    logger.info("Just an information")
     return printcsv()
 
     

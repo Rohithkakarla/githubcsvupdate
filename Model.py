@@ -8,9 +8,11 @@ Original file is located at
 """
 
 import pandas as pd
+import logging
 
+logger=logging.getLogger()
 
 def printcsv():
     df = pd.read_csv("pima-indians-diabetesdata-pima-indians-diabetesdata.csv")
-    print(df.tail())
+    logger.info(df.tail())
     return "success"
